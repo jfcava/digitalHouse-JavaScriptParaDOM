@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript para DOM</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<!-- Evento al cargar la pagina -->
+<body onload="checkCookies()">
+
+    <p id="testCookies"></p>
+    
+    <h1>JavaScript para DOM</h1>
+    
+    <h3 id="test"></h3>
+
+    <h3 id="test2">Cambiamos estilo desde JS</h3>
+    
+    <h3 id="test3">Cambiamos estilo desde JS agregando una clase</h3>
+
+
+    <h2>Query Selectors</h2>
+
+    <p class="saludo">Hola Mundo!</p>
+    <p class="saludo">Como estan?!</p>
+
+    <p id="testQuery"></p>
+
+    <h2>FORMS:</h2>
+
+    <form id="form1">
+        Nombre: <input type="text" name="nombre" value="Juan"> <br>
+        Apellido: <input type="text" name="nombre" value="Cavallieri"> <br>
+        Curso: <input type="text" name="nombre" value="JavaScript para DOM"> <br>
+        <input type="submit" value="Enviar">
+    </form>
+
+    <p id="testForm"></p>
+
+
+    <h2>EVENTOS</h2>
+
+    <!-- Cambiamos el texto al hacerle Click -->
+    <p onclick="this.innerHTML = 'Hola Mundo!'">Hazme Click!</p>
+
+    <p onclick="changeThisElement(this)">Hazme Click!</p>
+
+    <h3>Agregamos texto con un Boton:</h3>
+
+    <h4>La fecha de hoy es:</h4>
+    <p id="testFecha"></p>
+
+    <button id="btn">Hazme Click!</button>
+
+    <h3>Uppercase en un input:</h3>
+
+    <form>
+        <label for="name">Nombre:</label>
+        <input type="text" id="inputName" oninput="upperCase()">
+    </form>
+
+
+    <h3>Eventos con Hover o Leave Hover</h3>
+
+    <div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+        Ponte arriba con el mouse
+    </div>
+
+    <h3>Evento cuando hago foco en un input</h3>
+
+    <input type="text" onfocus="changeStyle(this)">
+
+    <!-- SIEMPRE AL FINAL -->
+    <script src="script.js"></script> 
+</body>
+</html>
