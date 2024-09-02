@@ -117,3 +117,14 @@ const mouseOut = element => {
 const changeStyle = element => {
     element.style.background = 'aqua';
 }
+
+// ******** EVENTOS DE TECLADO **********
+
+let key;
+
+const keydown = ($event) => {
+    key = $event.key;
+    console.log(key);
+    key = $event.getModifierState('Alt');
+    document.getElementById('key').innerHTML = key ? 'Presionaste la tecla ALT' : '';
+}

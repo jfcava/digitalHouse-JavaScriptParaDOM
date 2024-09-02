@@ -18,7 +18,7 @@
     <h3 id="test2">Cambiamos estilo desde JS</h3>
     
     <h3 id="test3">Cambiamos estilo desde JS agregando una clase</h3>
-
+    <hr>
 
     <h2>Query Selectors</h2>
 
@@ -26,6 +26,8 @@
     <p class="saludo">Como estan?!</p>
 
     <p id="testQuery"></p>
+
+    <hr>
 
     <h2>FORMS:</h2>
 
@@ -38,7 +40,7 @@
 
     <p id="testForm"></p>
 
-
+    <hr>
     <h2>EVENTOS</h2>
 
     <!-- Cambiamos el texto al hacerle Click -->
@@ -52,7 +54,7 @@
     <p id="testFecha"></p>
 
     <button id="btn">Hazme Click!</button>
-
+    <hr>
     <h3>Uppercase en un input:</h3>
 
     <form>
@@ -60,17 +62,28 @@
         <input type="text" id="inputName" oninput="upperCase()">
     </form>
 
-
+    <hr>
     <h3>Eventos con Hover o Leave Hover</h3>
 
     <div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
         Ponte arriba con el mouse
     </div>
 
+    <hr>
     <h3>Evento cuando hago foco en un input</h3>
 
     <input type="text" onfocus="changeStyle(this)">
 
+    <hr>
+
+    <h2>EVENTOS DE TECLADO</h2>
+
+    
+    <h3>Muestro en la consola la tecla presionada en el input</h3>
+    <h3>Aviso en el p si presionaste la tecla Alt</h3>
+    <input type="text" onkeydown="keydown(event)">
+
+    <p id="key"></p>
     <!-- SIEMPRE AL FINAL -->
     <script src="script.js"></script> 
 </body>
