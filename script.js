@@ -128,3 +128,65 @@ const keydown = ($event) => {
     key = $event.getModifierState('Alt');
     document.getElementById('key').innerHTML = key ? 'Presionaste la tecla ALT' : '';
 }
+
+
+// ******* MANIPULANDO NODOS EN EL DOM *********
+
+// Creando un nodo de parrafo
+const paragraph = document.createElement('p');
+// Creamos un elmento de texto
+const node = document.createTextNode('Este es el contenido nuevo');
+// Incorporamos el elemento de texto al nodo de parrafo
+paragraph.appendChild(node);
+
+// En la variable container tenemos el div
+const container = document.getElementById('div-nodos');
+const p1 = document.getElementById('p1-nodos');
+// Agregamos el contenido nuevo ANTES que el p1 que teniamos antes
+container.insertBefore(paragraph,p1);
+
+
+// Eliminamos el p2
+const p2 = document.getElementById('p2-nodos');
+p2.remove();
+
+// Eliminamos ahora el p1
+container.removeChild(p1);
+
+// Reemplazamos el p3 por el contenido nuevo
+const p3 = document.getElementById('p3-nodos');
+container.replaceChild(paragraph, p3); // Primer valor el elemento que reemplaza, y el segundo el elemento a reemplazar
+
+
+
+// ******** AGREGAR O QUITAR CLASES *********
+
+// Agregamos una clase al DIV cuando presionamos un boton
+const addClass = () => {
+    // Tomamos el ClassList del elemento DIV
+    const divClassList = document.getElementById('div-agregarClase').classList;
+    // Agregamos una clase a elemento
+    divClassList.add('red-background');
+}
+
+
+// Remover una clase del elemento DIV
+const removeClass = () => {
+    document.getElementById('div-agregarClase').classList.remove('red-background');
+}
+
+
+// Agregamos y quitamos un estilo con el mismo boton mediante el Toggle
+const toggleClass = () => {
+    document.getElementById('div-intercambiarClase').classList.toggle('red-background');
+}
+
+
+
+// ********* AGREGAR O QUITAR ATRIBUTOS **********
+
+const paragraph1 = document.getElementById('paragraph1')
+const paragraph2 = document.getElementById('paragraph2')
+
+let textop = paragraph1.getAttribute('class')
+document.getElementById('atribute').innerHTML = textop

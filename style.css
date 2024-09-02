@@ -6,9 +6,22 @@ h1 {
     color : orange;
 }
 
-div{
+#div-eventos{
     height: 300px;
     width: 300px;
     border: 1px solid black;
     background-color: aqua;
+}
+
+#p2-nodos{
+    color: red;
+}
+
+#p3-nodos{
+    color: blue;
+}
+
+.red-background{
+    background-color: red;
+    border: 1px solid black;
 }

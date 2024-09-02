@@ -65,7 +65,7 @@
     <hr>
     <h3>Eventos con Hover o Leave Hover</h3>
 
-    <div onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
+    <div id="div-eventos" onmouseover="mouseOver(this)" onmouseout="mouseOut(this)">
         Ponte arriba con el mouse
     </div>
 
@@ -84,6 +84,53 @@
     <input type="text" onkeydown="keydown(event)">
 
     <p id="key"></p>
+    
+    <hr>
+
+    <h2>MANIPULANDO NODOS EN EL DOM</h2>
+
+    <h3>Replace, Remove y AppendChild para poder agregar, eliminar y modificar un nodo del DOM</h3>
+
+    <div id="div-nodos">
+        <p id="p1-nodos">Este es el primer parrafo</p>
+        <p id="p2-nodos">Este es el segundo parrafo</p>
+        <p id="p3-nodos">Este es el tercer parrafo</p>
+    </div>
+    
+    <hr>
+
+    <h2>AGREGAR O QUITAR CLASES</h2>
+
+    <h3>Agregamos o quitamos estilo a un DIV mediante los botones</h3>
+
+    <button onclick="addClass()">Agregar clase</button><br>
+    <button onclick="removeClass()">Eliminar clase</button>
+
+    <div id="div-agregarClase">
+        <p>Soy un P dentro de un DIV</p>
+    </div>
+
+    <hr>
+
+    <h3>Agregamos o quitamos un estilo a un DIV con un solo boton</h3>
+
+    <button onclick="toggleClass()">Intercambiar Clase</button>
+
+    <div id="div-intercambiarClase">
+        <p>Soy otro P dentro de otro DIV</p>
+    </div>
+
+
+    <hr>
+
+    <h2>AGREGAR O QUITAR ATRIBUTOS</h2>
+
+    <p id="paragraph1" class="texto-paragraph">Este parrafo tiene un atributo</p>
+    <p id="paragraph2">Este parrafo no tiene ese atributo</p>
+    
+    <p>El atributo que tiene es una clase llamada:</p>
+    <p id="atribute"></p>
+
     <!-- SIEMPRE AL FINAL -->
     <script src="script.js"></script> 
 </body>
