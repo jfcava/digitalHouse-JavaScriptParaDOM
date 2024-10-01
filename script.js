@@ -188,5 +188,40 @@ const toggleClass = () => {
 const paragraph1 = document.getElementById('paragraph1')
 const paragraph2 = document.getElementById('paragraph2')
 
-let textop = paragraph1.getAttribute('class')
+// Si el paragraph1 tiene atributo muestra ese, si lo tiene el paragraph2 muestra ese
+let textop = paragraph1.getAttribute('class') ? paragraph1.getAttribute('class') : paragraph2.getAttribute('class')
 document.getElementById('atribute').innerHTML = textop
+
+// Seteamos el valor de "value" del input
+const inputNombre = document.getElementById('input-nombre')
+inputNombre.setAttribute('value', 'Juan Cavallieri')
+
+// Eliminamos el "value" del input
+const inputNombre2 = document.getElementById('input-nombre2')
+inputNombre2.removeAttribute('value')
+
+
+// ********* AGREGAR O QUITAR ESTILOS **********
+
+document.getElementById('p-styles').style.color = 'red'
+document.getElementById('p-styles').style.backgroundColor = 'yellow'
+
+
+// ********* BOM (Browser Object Model) **********
+
+document.getElementById('screenh').innerHTML = screen.height
+document.getElementById('screenw').innerHTML = screen.width
+
+document.getElementById('screenc').innerHTML = screen.colorDepth + 'bits'
+
+document.getElementById('url').innerHTML = location.href
+
+document.getElementById('cookies').innerHTML = navigator.cookieEnabled ? 'Si' : 'No'
+
+const historyBack = () => history.back()
+const historyForward = () => history.forward()
+const clickMe = () => open('https://www.digitalhouse.com')
+
+document.getElementById('btn-Volver').addEventListener('click', historyBack)
+document.getElementById('btn-Ir').addEventListener('click', historyForward)
+document.getElementById('btn-Abrir').addEventListener('click', clickMe)
