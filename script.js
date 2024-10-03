@@ -225,3 +225,9 @@ const clickMe = () => open('https://www.digitalhouse.com')
 document.getElementById('btn-Volver').addEventListener('click', historyBack)
 document.getElementById('btn-Ir').addEventListener('click', historyForward)
 document.getElementById('btn-Abrir').addEventListener('click', clickMe)
+
+
+// ********* COOKIES **********
+
+// De esta manera se agrega una cookie, clave - valor
+document.cookie = 'username=Juan Cavallieri'
