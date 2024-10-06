@@ -231,3 +231,66 @@ document.getElementById('btn-Abrir').addEventListener('click', clickMe)
 
 // De esta manera se agrega una cookie, clave - valor
 document.cookie = 'username=Juan Cavallieri'
+
+
+// ********* Browser Web API: Geolocalizacion **********
+
+const ubicacion = document.getElementById('ubicacion');
+
+const showPosition = position => {
+    ubicacion.innerHTML = 'La latitud es: ' + position.coords.latitude + '<br>La longitud es: ' + position.coords.longitude;
+}
+
+const getLocation = () => {
+    if(navigator.geolocation){
+        navigator.geolocation.getCurrentPosition(showPosition)
+    }else{
+        ubicacion.innerHTML = 'La geolocacion esta apagada'
+    }
+}
+
+
+
+// ********* Browser Web API: Forms Validation **********
+
+const doValidation = () => {
+    const number = document.getElementById('number')
+    document.getElementById('error').innerHTML = number.checkValidity() ? 'El numero esta correcto' : number.validationMessage
+}
+
+
+const goBack = () => window.history.back() // Nos permite ir hacia atras una sola vez
+const goBackx2 = () => window.history.go(-2) // Nos permite ir 2 veces hacia atras
+const goForward = () => window.history.forward() // Nos permite ir hacia adelante una sola vez
+const goForwardx2 = () => window.history.go(2) // Nos permite ir 2 veces hacia adelante
+ 
+
+
+// ********* LocalStorage **********
+
+const firstname = document.getElementById('firstname-local')
+const lastname = document.getElementById('lastname-local')
+const job = document.getElementById('job-local')
+
+document.getElementById('welcome').innerHTML = localStorage.getItem('userName') != '' ? 'Bienvenido ' + localStorage.getItem('userName') + '!!!' : '' 
+
+const save = () => {
+    localStorage.setItem('userName', firstname.value + ' ' + lastname.value)
+    localStorage.setItem('job', job.value)
+}
+
+
+
+// ********* SessionStorage **********
+
+
+const firstnameSession = document.getElementById('firstname-session')
+const lastnameSession = document.getElementById('lastname-session')
+const jobSession = document.getElementById('job-session')
+
+
+const saveSession = () => {
+    sessionStorage.setItem('userName', firstnameSession.value + ' ' + lastnameSession.value)
+    sessionStorage.setItem('job', jobSession.value)
+    document.getElementById('welcome-session').innerHTML = sessionStorage.getItem('userName') != null ? 'Bienvenido ' + sessionStorage.getItem('userName') + '!!!' : '' 
+}

@@ -164,6 +164,62 @@
     <button id="btn-Ir">Ir a la pagina siguiente</button>
     <button id="btn-Abrir">Abrir pagina DH</button>
 
+
+    <hr>
+
+    <h2>Browser Web API: Geolocalizacion </h2>
+
+    <h4>Usted esta ubicado en la siguiente locacion:</h4>
+    <p id="ubicacion"></p>
+    <button onclick="getLocation()">Mostrar posicion</button>
+
+
+    <hr>
+
+    <h2>Browser Web API: Forms Validation</h2>
+
+    <input id="number" type="number" min="50" max="100" required>
+    <button onclick="doValidation()">Es correcto el numero?</button>
+
+    <p>Si el numero es menor a 50 o mayor a 100, o no lo ponemos, el error del navegador sera:</p>
+    <p id="error"></p>
+
+
+    <hr>
+
+    <h2>APIs: History</h2>
+
+    <button onclick="goBack()">Atras</button>
+    <button onclick="goBackx2()">Atras 2 veces</button><br>
+    <button onclick="goForward()">Adelante</button>
+    <button onclick="goForwardx2()">Adelante 2 veces</button>
+
+
+    <hr>
+
+    <h2>LocalStorage</h2><br>
+    <h4>La informacion persiste en el navegador</h4>
+
+    <p id="welcome"></p>
+
+    <input type="text" name="firstname" id="firstname-local" placeholder="Escribe tu nombre"><br>
+    <input type="text" name="lastname" id="lastname-local" placeholder="Escribe tu apellido"><br>
+    <input type="text" name="job" id="job-local" placeholder="Escribe tu ocupacion"><br>
+    <button onclick="save()">Guardar informacion</button>
+
+    <hr>
+
+    <h2>SessionStorage</h2>
+    <h4>La informacion persiste hasta que cerramos el navegador</h4>
+
+    <p id="welcome-session"></p>
+
+    <input type="text" name="firstname" id="firstname-session" placeholder="Escribe tu nombre"><br>
+    <input type="text" name="lastname" id="lastname-session" placeholder="Escribe tu apellido"><br>
+    <input type="text" name="job" id="job-session" placeholder="Escribe tu ocupacion"><br>
+    <button onclick="saveSession()">Guardar informacion</button>
+
+
     <!-- SIEMPRE AL FINAL -->
     <script src="script.js"></script> 
 </body>
