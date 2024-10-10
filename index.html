@@ -206,6 +206,8 @@
     <input type="text" name="lastname" id="lastname-local" placeholder="Escribe tu apellido"><br>
     <input type="text" name="job" id="job-local" placeholder="Escribe tu ocupacion"><br>
     <button onclick="save()">Guardar informacion</button>
+    <button onclick="removeLocalName()">Borrar nombre LocalStorage</button>
+    <button onclick="removeLocalAll()">Borrar todo LocalStorage</button>
 
     <hr>
 
@@ -217,7 +219,19 @@
     <input type="text" name="firstname" id="firstname-session" placeholder="Escribe tu nombre"><br>
     <input type="text" name="lastname" id="lastname-session" placeholder="Escribe tu apellido"><br>
     <input type="text" name="job" id="job-session" placeholder="Escribe tu ocupacion"><br>
-    <button onclick="saveSession()">Guardar informacion</button>
+    <button onclick="saveSession()">Guardar informacion</button><br>
+    <button onclick="removeSessionName()">Borrar nombre SessionStorage</button>
+    <button onclick="removeSessionAll()">Borrar todo SessionStorage</button>
+
+
+    <hr>
+
+    <h2>Consola del navegador</h2>
+
+    <p>Comandos de la consola</p>
+
+    <button onclick="miFuncionTrace()">Rastrear</button>
+
 
 
     <!-- SIEMPRE AL FINAL -->

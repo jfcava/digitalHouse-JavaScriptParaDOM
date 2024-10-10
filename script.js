@@ -279,6 +279,13 @@ const save = () => {
     localStorage.setItem('job', job.value)
 }
 
+const removeLocalName = () => {
+    localStorage.removeItem('userName')
+}
+
+const removeLocalAll = () => {
+    localStorage.clear()
+}
 
 
 // ********* SessionStorage **********
@@ -293,4 +300,85 @@ const saveSession = () => {
     sessionStorage.setItem('userName', firstnameSession.value + ' ' + lastnameSession.value)
     sessionStorage.setItem('job', jobSession.value)
     document.getElementById('welcome-session').innerHTML = sessionStorage.getItem('userName') != null ? 'Bienvenido ' + sessionStorage.getItem('userName') + '!!!' : '' 
+}
+
+const removeSessionName = () => {
+    sessionStorage.removeItem('userName')
+}
+
+const removeSessionAll = () => {
+    sessionStorage.clear()
+}
+
+
+// ********* CONSOLA DEL NAVEGADOR **********
+
+const object = { name: 'Juan Cavallieri', job: 'Developer'}
+const array = [1,2,3,4]
+const css = 'color: red; background: aqua; font-size:20px'
+const css2 = 'color: green; background: aqua; font-size:20px'
+
+
+// Concateno dos elementos, un string y la variable
+console.log('Objeto', object)
+console.log('Array', array)
+
+
+// Con %c nos va a permitir modificar el texto
+console.log('%cEste texto va a tener estilo', css)
+
+console.log('%cEste texto va a tener un estilo y %ceste otro texto va a tener otro', css, css2)
+
+
+// Console Assert, se muestra la informacion si la condicion es false
+const aa = 5
+const bb = 3
+
+console.assert(aa+bb==11, 'No es igual a 11')
+
+// Con console.clear() se borra todo en la consola
+
+// Con console.count() cuento cuantos elementos tiene el array
+for (let i = 0; i < array.length; i++) {
+    console.count('Mi array tiene: ')    
+}
+
+// Nos muestra el mensaje en consola como un error
+console.error('Este es un texto que sirve para mostrar en caso de que fuera un error')
+
+// Nos muestra el mensaje en consola como una advertencia
+console.warn('Se utiliza para dar una advertencia sin llegar a ser un error')
+
+// Console.group para agrupar mensajes
+console.log('Hola mundo')
+
+console.group('Mensajes importantes agrupados') //Puedo usar console.groupCollapsed para que el grupo aparezca colapsado
+console.log('Este es otro hola mundo')
+console.log('Otro mensaje')
+console.warn('Advertencia')
+console.error('Error')
+console.groupEnd()
+console.log('Esto estara adentro?')
+
+// Console.table para mostrar un array en formato tabla
+console.table(array)
+
+// Console.time para calcular el tiempo que se demora desde que comienza hasta que termina
+
+console.time('Cuanto demora 2 bucles?')
+for (let i = 0; i < 100000; i++) {
+    for (let j = 0; j < 5000; j++) {
+        
+    }
+}
+console.timeEnd('Cuanto demora 2 bucles?')
+
+// Console.trace para rastrear una accion en el codigo
+
+const otroMetodo = () => {
+    console.trace()
+}
+
+const miFuncionTrace = () => {
+    otroMetodo()
 }
