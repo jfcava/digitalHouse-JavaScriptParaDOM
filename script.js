@@ -382,3 +382,30 @@ const otroMetodo = () => {
 const miFuncionTrace = () => {
     otroMetodo()
 }
+
+
+
+// ********* TIMERS **********
+
+const action = () => {
+    setTimeout(() => {
+        console.log('Esta accion es la del boton')
+    }, 2000);
+}
+
+const action2 = () => {
+    setInterval(() => {
+        console.log('Esta accion sale del boton de intervalo')
+    }, 2000);
+}
+
+const action3 = () => {
+    const interval = setInterval(() => {
+        console.log('Accion con intervalo')
+    }, 1000);
+
+    const timeOut = setTimeout(() => {
+        console.log('Limpiamos el intervalo')
+        clearInterval(interval)
+    }, 10000);
+}
